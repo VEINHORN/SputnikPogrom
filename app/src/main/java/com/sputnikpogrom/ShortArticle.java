@@ -6,6 +6,24 @@ package com.sputnikpogrom;
 public class ShortArticle {
     private String title;
     private String shortText;
+    private String url;
+
+    public ShortArticle() {
+
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public ShortArticle(String title, String shortText) {
+        this.title = title;
+        this.shortText = shortText;
+    }
 
     public String getTitle() {
         return title;
