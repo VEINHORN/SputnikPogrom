@@ -16,7 +16,7 @@ public class ArticleActivity extends ActionBarActivity {
         setContentView(R.layout.activity_article);
         webView = (WebView)findViewById(R.id.webview);
         webView.getSettings().setBuiltInZoomControls(true);
-        
+
         String articleUrl = getIntent().getStringExtra("articleUrl");
         ArticleLoader articleLoader = new ArticleLoader(webView, articleUrl);
         articleLoader.execute();

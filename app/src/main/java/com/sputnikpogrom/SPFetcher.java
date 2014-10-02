@@ -11,14 +11,14 @@ import java.io.IOException;
  * Created by veinhorn on 2.10.14.
  */
 public class SPFetcher {
-
-    private static String URL = "http://sputnik.t30p.ru";
+    private final static String URL = "http://sputnik.t30p.ru";
+    private final static int ARTICLES_NUM = 5; // 5 * 9 = 45 last articles to show
 
     public ShortArticlesContainer getArticles() {
         ShortArticlesContainer shortArticles = new ShortArticlesContainer();
         try {
             String url = ""; String adder = "?page=";
-            for(int i = 1; i <= 15; i++) {
+            for(int i = 1; i <= ARTICLES_NUM; i++) {
                 if(i == 1) {
                     url = URL;
                 } else {
