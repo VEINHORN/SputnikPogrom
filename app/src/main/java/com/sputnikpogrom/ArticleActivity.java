@@ -15,14 +15,9 @@ public class ArticleActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
         webView = (WebView)findViewById(R.id.webview);
-        //webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
-
+        
         String articleUrl = getIntent().getStringExtra("articleUrl");
-        //Toast.makeText(this, articleUrl, Toast.LENGTH_SHORT).show();
-        //String str = "<html><body>You scored <b>192</b> points.</body></html>";
-        //webView.loadData(str, "text/html", null);
-        //webView.loadUrl(articleUrl);
         ArticleLoader articleLoader = new ArticleLoader(webView, articleUrl);
         articleLoader.execute();
     }
