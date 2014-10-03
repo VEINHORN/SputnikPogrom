@@ -12,17 +12,18 @@ import java.io.IOException;
  */
 public class SPFetcher {
     private final static String URL = "http://sputnik.t30p.ru";
-    private final static int ARTICLES_NUM = 5; // 5 * 9 = 45 last articles to show
+    private final static String PAGE = "?page=";
+    private final static int ARTICLES_NUM = 7; // 7 * 9 = 63 last articles to show
 
     public ShortArticlesContainer getArticles() {
         ShortArticlesContainer shortArticles = new ShortArticlesContainer();
         try {
-            String url = ""; String adder = "?page=";
+            String url = "";
             for(int i = 1; i <= ARTICLES_NUM; i++) {
                 if(i == 1) {
                     url = URL;
                 } else {
-                    url = URL + adder + Integer.toString(i);
+                    url = URL + PAGE + Integer.toString(i);
                 }
 
                 Document document = Jsoup.connect(url).get();
@@ -35,7 +36,6 @@ public class SPFetcher {
                     shortArticles.addShortArticle(shortArticle);
                 }
             }
-
         } catch (IOException e) {
 
         }
