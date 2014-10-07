@@ -41,7 +41,7 @@ public class SPLoader extends AsyncTask<String, String, ShortArticlesContainer> 
             shortArticlesContainer.addShortArticle(shortArticle);
         }
 
-        progressDialog.hide();
+        progressDialog.dismiss();
         shortArticlesAdapter.notifyDataSetChanged();
     }
 }
