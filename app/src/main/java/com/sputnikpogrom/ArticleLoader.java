@@ -31,8 +31,13 @@ public class ArticleLoader extends AsyncTask<String, Integer, String> {
     }
 
     @Override
-    protected void onPostExecute(String result) {
+    protected void onPostExecute(String articleText) {
         progressDialog.dismiss();
+
+        String start = "<html><head><style>img { width: 100% };</style></head><body>";
+        String end = "</body></html>";
+        String result = start + articleText + end;
+
         webView.getSettings().setDefaultTextEncodingName("utf-8");
         webView.loadDataWithBaseURL(null, result, "text/html", "utf-8", null);
         //webView.loadData(result, "text/html; charset=UTF-8", null);
