@@ -23,10 +23,15 @@ public class ArticleActivity extends ActionBarActivity {
         adView.loadAd(new AdRequest.Builder().build());
 
         webView = (WebView)findViewById(R.id.webview);
-        webView.getSettings().setBuiltInZoomControls(true);
 
         String articleUrl = getIntent().getStringExtra("articleUrl");
         ArticleLoader articleLoader = new ArticleLoader(this, webView, articleUrl);
         articleLoader.execute();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        webView.getSettings().setBuiltInZoomControls(false);
     }
 }
