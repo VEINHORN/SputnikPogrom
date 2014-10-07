@@ -7,25 +7,23 @@ import android.webkit.WebView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 /**
  * Created by veinhorn on 2.10.14.
  */
 public class ArticleActivity extends ActionBarActivity {
-    private WebView webView;
-    private AdView adView;
+    @InjectView(R.id.webview) WebView webView;
+    @InjectView(R.id.articleAdView) AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
-
-        adView = (AdView)findViewById(R.id.articleAdView);
+        ButterKnife.inject(this);
         adView.loadAd(new AdRequest.Builder().build());
-
-        webView = (WebView)findViewById(R.id.webview);
-
-        String articleUrl = getIntent().getStringExtra("articleUrl");
-        ArticleLoader articleLoader = new ArticleLoader(this, webView, articleUrl);
+        ArticleLoader articleLoader = new ArticleLoader(this, webView, getIntent().getStringExtra("articleUrl"));
         articleLoader.execute();
     }
 

@@ -4,9 +4,7 @@ package com.sputnikpogrom;
  * Created by veinhorn on 2.10.14.
  */
 public class ShortArticle {
-    private String title;
-    private String shortText;
-    private String url;
+    private String title, shortText, url;
 
     public ShortArticle() {
 

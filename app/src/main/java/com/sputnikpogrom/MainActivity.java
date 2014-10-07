@@ -6,25 +6,23 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import butterknife.InjectView;
+
 public class MainActivity extends ActionBarActivity {
-    private ListView articlesListView;
-    private TextView testTextViev;
-    private AdView adView;
+    @InjectView(R.id.articlesListView) ListView articlesListView;
+    @InjectView(R.id.adView) AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        adView = (AdView)findViewById(R.id.adView);
         adView.loadAd(new AdRequest.Builder().build());
 
-        articlesListView = (ListView)findViewById(R.id.articlesListView);
         final ShortArticlesContainer shortArticlesContainer = new ShortArticlesContainer();
         ShortArticlesAdapter shortArticlesAdapter = new ShortArticlesAdapter(this, shortArticlesContainer);
         articlesListView.setAdapter(shortArticlesAdapter);

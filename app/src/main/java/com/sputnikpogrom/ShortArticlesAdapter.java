@@ -7,12 +7,19 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 /**
  * Created by veinhorn on 2.10.14.
  */
 public class ShortArticlesAdapter extends BaseAdapter {
     private static class ViewHolder {
-        TextView title;
+        @InjectView(R.id.short_article_title) TextView title;
+
+        public ViewHolder(View view) {
+            ButterKnife.inject(this, view);
+        }
     }
 
     private Context context;
@@ -42,15 +49,13 @@ public class ShortArticlesAdapter extends BaseAdapter {
 
         if(convertView == null) {
             convertView = layoutInflater.inflate(R.layout.short_article_item, null);
-            viewHolder = new ViewHolder();
-            viewHolder.title = (TextView)convertView.findViewById(R.id.short_article_title);
+            viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder)convertView.getTag();
         }
 
         viewHolder.title.setText(shortArticlesContainer.getShortArticle(position).getTitle());
-
         return convertView;
     }
 }
