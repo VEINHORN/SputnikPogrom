@@ -14,7 +14,7 @@ import butterknife.InjectView;
  * Created by veinhorn on 2.10.14.
  */
 public class ShortArticlesAdapter extends BaseAdapter {
-    private static class ViewHolder {
+    static class ViewHolder {
         @InjectView(R.id.short_article_title) TextView title;
 
         public ViewHolder(View view) {
