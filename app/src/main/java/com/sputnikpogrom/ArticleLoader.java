@@ -34,7 +34,7 @@ public class ArticleLoader extends AsyncTask<String, Integer, String> {
     protected void onPostExecute(String articleText) {
         progressDialog.dismiss();
 
-        String start = "<html><head><style>img { width: 100% };</style></head><body>";
+        String start = "<html><head><style>img { width: 100%; height: auto; };</style></head><body>";
         String end = "</body></html>";
         String result = start + articleText + end;
         webView.getSettings().setDefaultTextEncodingName("utf-8");
