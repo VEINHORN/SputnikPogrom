@@ -2,6 +2,7 @@ package com.sputnikpogrom;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
 import android.webkit.WebView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -30,6 +31,6 @@ public class ArticleActivity extends ActionBarActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        webView.getSettings().setBuiltInZoomControls(false);
+        webView.setVisibility(View.GONE);
     }
 }
