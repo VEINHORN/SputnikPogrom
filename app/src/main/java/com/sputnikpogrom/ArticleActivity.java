@@ -23,14 +23,19 @@ public class ArticleActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
         ButterKnife.inject(this);
+
         adView.loadAd(new AdRequest.Builder().build());
+
+        webView.getSettings().setDefaultTextEncodingName("utf-8");
+        webView.getSettings().setBuiltInZoomControls(true);
+
         ArticleLoader articleLoader = new ArticleLoader(this, webView, getIntent().getStringExtra("articleUrl"));
         articleLoader.execute();
     }
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
         webView.setVisibility(View.GONE); // bug with zoom buttons without this line
+        super.onDestroy();
     }
 }

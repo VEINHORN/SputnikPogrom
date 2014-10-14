@@ -4,7 +4,7 @@
     <string name="app_name">Спутник и Погром</string>
     <string name="settings">Настройки</string>
     <string name="adsId">ca-app-pub-4471993256799343/5710032513</string>
-    <string name="default_num_of_articles">30</string>
+    <string name="default_num_of_articles">20</string>
     <string name="settings_articles_number_title">Выберите количество загр-х статей при старте</string>
     <string name="settings_articles_number_summary_begin">При запуске будет загружен список из</string>
     <string name="settings_articles_number_summary_end">статей</string>

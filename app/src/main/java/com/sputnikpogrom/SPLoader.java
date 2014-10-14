@@ -29,7 +29,7 @@ public class SPLoader extends AsyncTask<String, String, ShortArticlesContainer> 
 
     @Override
     protected ShortArticlesContainer doInBackground(String... args) {
-        return new SPFetcher().getArticles();
+        return new SPFetcher(context).getArticles();
     }
 
     @Override

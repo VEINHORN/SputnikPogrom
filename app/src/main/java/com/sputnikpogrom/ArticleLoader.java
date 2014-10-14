@@ -37,8 +37,6 @@ public class ArticleLoader extends AsyncTask<String, Integer, String> {
         String start = "<html><head><style>img { width: 100%; height: auto; };</style></head><body>";
         String end = "</body></html>";
         String result = start + articleText + end;
-        webView.getSettings().setDefaultTextEncodingName("utf-8");
-        webView.getSettings().setBuiltInZoomControls(true);
         webView.loadDataWithBaseURL(null, result, "text/html", "utf-8", null);
     }
 }
