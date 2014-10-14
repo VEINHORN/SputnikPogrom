@@ -52,6 +52,12 @@ public class SPFetcher {
                     ShortArticle shortArticle = new ShortArticle();
                     shortArticle.setTitle(element.getElementsByTag("h3").get(0).text());
                     shortArticle.setUrl(URL + element.getElementsByTag("a").get(0).attr("href"));
+
+                    Elements imgElements = element.getElementsByTag("img");
+                    if(imgElements.isEmpty())
+                        shortArticle.setPosterUrl(null); // if we cannot get image from short description on site
+                    else
+                        shortArticle.setPosterUrl(element.getElementsByTag("img").get(0).attr("src"));
                     shortArticles.addShortArticle(shortArticle);
 
                     if(counter++ == articlesNumForCouner) return shortArticles;

@@ -4,7 +4,7 @@ package com.sputnikpogrom;
  * Created by veinhorn on 2.10.14.
  */
 public class ShortArticle {
-    private String title, shortText, url;
+    private String title, shortText, url, posterUrl;
 
     public ShortArticle() {
 
@@ -37,5 +37,13 @@ public class ShortArticle {
 
     public void setShortText(String shortText) {
         this.shortText = shortText;
+    }
+
+    public String getPosterUrl() {
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String posterUrl) {
+        this.posterUrl = posterUrl;
     }
 }

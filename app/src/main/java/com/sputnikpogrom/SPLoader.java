@@ -38,6 +38,7 @@ public class SPLoader extends AsyncTask<String, String, ShortArticlesContainer> 
             ShortArticle shortArticle = new ShortArticle();
             shortArticle.setTitle(shortArticles.getShortArticle(i).getTitle());
             shortArticle.setUrl(shortArticles.getShortArticle(i).getUrl());
+            shortArticle.setPosterUrl(shortArticles.getShortArticle(i).getPosterUrl());
             shortArticlesContainer.addShortArticle(shortArticle);
         }
 

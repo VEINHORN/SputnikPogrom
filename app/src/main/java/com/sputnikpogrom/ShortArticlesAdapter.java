@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -16,6 +19,7 @@ import butterknife.InjectView;
 public class ShortArticlesAdapter extends BaseAdapter {
     static class ViewHolder {
         @InjectView(R.id.short_article_title) TextView title;
+        @InjectView(R.id.short_article_poster) ImageView poster;
 
         public ViewHolder(View view) {
             ButterKnife.inject(this, view);
@@ -56,6 +60,10 @@ public class ShortArticlesAdapter extends BaseAdapter {
         }
 
         viewHolder.title.setText(shortArticlesContainer.getShortArticle(position).getTitle());
+
+        String posterUrl = shortArticlesContainer.getShortArticle(position).getPosterUrl();
+        if(posterUrl != null)
+            Picasso.with(context).load(posterUrl).into(viewHolder.poster);
         return convertView;
     }
 }
