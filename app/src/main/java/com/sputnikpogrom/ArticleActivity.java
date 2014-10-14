@@ -31,6 +31,6 @@ public class ArticleActivity extends ActionBarActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        webView.setVisibility(View.GONE);
+        webView.setVisibility(View.GONE); // bug with zoom buttons without this line
     }
 }

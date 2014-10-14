@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="num_of_articles"
+        android:defaultValue="@string/default_num_of_articles"
+        android:title="@string/settings_articles_number_title"/>
+</PreferenceScreen>

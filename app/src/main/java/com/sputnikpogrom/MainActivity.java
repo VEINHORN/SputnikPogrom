@@ -55,6 +55,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
             case R.id.mainmenu_settings:
+                startActivity(new Intent(this, SettingsActivity.class));
                 break;
         }
         return false;
