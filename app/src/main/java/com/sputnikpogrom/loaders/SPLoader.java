@@ -1,9 +1,14 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.loaders;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.ListView;
+
+import com.sputnikpogrom.entities.ShortArticle;
+import com.sputnikpogrom.adapters.ShortArticlesAdapter;
+import com.sputnikpogrom.entities.ShortArticlesContainer;
+import com.sputnikpogrom.fetchers.SPFetcher;
 
 /**
  * Created by veinhorn on 2.10.14.

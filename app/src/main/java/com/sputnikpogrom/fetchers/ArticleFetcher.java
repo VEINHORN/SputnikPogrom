@@ -1,4 +1,4 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.fetchers;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

@@ -1,4 +1,4 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.entities;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,10 @@ import android.widget.ListView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.sputnikpogrom.R;
+import com.sputnikpogrom.adapters.ShortArticlesAdapter;
+import com.sputnikpogrom.entities.ShortArticlesContainer;
+import com.sputnikpogrom.loaders.SPLoader;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

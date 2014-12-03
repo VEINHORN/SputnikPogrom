@@ -1,4 +1,4 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +7,8 @@ import android.webkit.WebView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.sputnikpogrom.R;
+import com.sputnikpogrom.loaders.ArticleLoader;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

@@ -1,7 +1,11 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.fetchers;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
+
+import com.sputnikpogrom.R;
+import com.sputnikpogrom.entities.ShortArticle;
+import com.sputnikpogrom.entities.ShortArticlesContainer;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

@@ -1,9 +1,11 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.loaders;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.webkit.WebView;
+
+import com.sputnikpogrom.fetchers.ArticleFetcher;
 
 /**
  * Created by veinhorn on 2.10.14.

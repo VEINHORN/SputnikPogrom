@@ -1,4 +1,4 @@
-package com.sputnikpogrom;
+package com.sputnikpogrom.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sputnikpogrom.R;
+import com.sputnikpogrom.entities.ShortArticlesContainer;
 import com.squareup.picasso.Picasso;
 
 import butterknife.ButterKnife;
