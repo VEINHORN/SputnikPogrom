@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
     <ListView
         android:padding="3dp"
+        android:layout_margin="10dp"
         android:dividerHeight="15dp"
         android:id="@+id/articlesListView"
         android:layout_width="fill_parent"
