@@ -1,6 +1,6 @@
 SputnikPogrom
 =============
-DEPRECATED: please go to our new [repository](https://github.com/VEINHORN/SputnikPogrom)
+DEPRECATED: please go to our new [repository](https://github.com/VEINHORN/Sputnik-Pogrom)
 =============
 Спутник и Погром теперь на Android. Приложение позволяет просматривать ленту последних статей на сайте. Читайте понравившиеся вам статьи.
 
